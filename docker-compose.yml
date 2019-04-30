@@ -2,7 +2,7 @@ version: '2'
 services:
    build:
       build: boxfuse-sample-java-war-hello-custom
-      envirenment:
+      environment:
         - TYPO3_CONTEXT=Development/Docker
    tomcat:
       build: tomcat
