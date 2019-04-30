@@ -1,18 +1,14 @@
 version: '2'
 services:
-   tomcat:
-      image: tomcat:8
-      links: 
-         - build
-      ports:
-         - "8080:8080"
-      volumes:
-         - ./nginx.conf:/etc/nginx/conf.d/default.conf
-      volumes_from:
-         - build
    build:
       build: boxfuse-sample-java-war-hello-custom
       envirenment:
         - TYPO3_CONTEXT=Development/Docker
-      volumes:
-         - ./htdocs:/var/www/html
+   tomcat:
+      build: tomcat
+      links:
+         - build
+      ports:
+         - "8080:8080"
+      volumes_from:
+         - build
