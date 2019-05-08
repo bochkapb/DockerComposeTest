@@ -10,4 +10,5 @@ RUN git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello
 WORKDIR boxfuse-sample-java-war-hello
 RUN pwd
 RUN mvn package
+RUN ls /boxfuse-sample-java-war-hello/target
 #RUN cp target/hello-1.0.war /usr/local/tomcat/webapps/
