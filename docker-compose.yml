@@ -1,14 +1,14 @@
 version: '2'
 services:
-   build:
+   maven:
       build: boxfuse-sample-java-war-hello-custom
       environment:
         - TYPO3_CONTEXT=Development/Docker
    tomcat:
       build: tomcat
       links:
-         - build
+         - maven
       ports:
          - "8080:8080"
       volumes_from:
-         - build
+         - maven
