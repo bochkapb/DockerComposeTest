@@ -1,7 +1,8 @@
 version: '3.7'
 services:
    tomcat:
-      build: tomcat
+      build:
+        context: ./tomcat
         args:
            - project_path=https://github.com/boxfuse/boxfuse-sample-java-war-hello
       ports:
