@@ -5,4 +5,4 @@ services:
       ports:
          - "8080:8080"
       environment:
-         - PROJECT_PATH = https://github.com/boxfuse/boxfuse-sample-java-war-hello
+         - PROJECT_PATH=https://github.com/boxfuse/boxfuse-sample-java-war-hello
