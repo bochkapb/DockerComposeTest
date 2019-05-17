@@ -5,5 +5,8 @@ services:
         context: ./tomcat
         args:
            - project_path=https://github.com/boxfuse/boxfuse-sample-java-war-hello
+           - project_workdir=boxfuse-sample-java-war-hello
+           - source_copy=/boxfuse-sample-java-war-hello/target/hello-1.0.war
+           - target_dir=/usr/local/tomcat/webapps/
       ports:
          - "8080:8080"
