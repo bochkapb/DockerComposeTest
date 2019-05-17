@@ -2,7 +2,7 @@ version: '2'
 services:
    tomcat:
       build: tomcat
+        args:
+           - project_path=https://github.com/boxfuse/boxfuse-sample-java-war-hello
       ports:
          - "8080:8080"
-      args:
-         - project_path=https://github.com/boxfuse/boxfuse-sample-java-war-hello
