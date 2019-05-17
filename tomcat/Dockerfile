@@ -10,3 +10,4 @@ FROM tomcat:8
 ARG source_copy
 ARG target_dir
 COPY --from=maven $source_copy $target_dir
+RUN ls $target_dir
