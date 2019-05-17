@@ -1,7 +1,7 @@
 FROM maven:latest AS maven
 #RUN apt-get update
 #RUN apt-get install -y git
-RUN git clone ${PROJECT_PATH}
+RUN git clone $PROJECT_PATH
 WORKDIR boxfuse-sample-java-war-hello
 RUN mvn package
 
